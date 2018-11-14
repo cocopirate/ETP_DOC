@@ -1,0 +1,453 @@
+/* ==========================================================================
+  全局
+  ========================================================================== */
+@font-face {
+  font-family: 'iconfont';  /* project id 692684 */
+  src: url('http://at.alicdn.com/t/font_692684_0htm5oxlygmn29.eot');
+  src: url('http://at.alicdn.com/t/font_692684_0htm5oxlygmn29.eot?#iefix') format('embedded-opentype'),
+  url('http://at.alicdn.com/t/font_692684_0htm5oxlygmn29.woff') format('woff'),
+  url('http://at.alicdn.com/t/font_692684_0htm5oxlygmn29.ttf') format('truetype'),
+  url('http://at.alicdn.com/t/font_692684_0htm5oxlygmn29.svg#iconfont') format('svg');
+}
+html {
+ background-color: #ffffff;
+}
+body {
+  min-width: 1200px;
+}
+a {
+	color:#666;
+	text-decoration:none;
+}
+a:hover {
+	color:#FF4401;
+}
+a:active,a:focus {
+	outline:0;
+}
+a.active {
+  color: #FF4401;
+}
+.f-wrap {
+ width: 1200px;
+ margin: 0 auto;
+}
+.header{
+  width: 100%;
+  height: 80px;
+  line-height: 80px;
+  font-size: 0;
+}
+.header .brand{
+  display: inline-block;
+  margin-right: 14px;
+  width: 88px;
+  height: 44px;
+  vertical-align: middle;
+  background-image: url(../images/brand/logo.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.header h3{
+  display: inline-block;
+  padding-left: 14px;
+  font-size: 18px;
+  color: #919191;
+  height: 24px;
+  line-height: 24px;
+  vertical-align: middle;
+  border-left: 1px solid #919191;
+}
+.content{
+  position: relative;
+  width: 100%;
+}
+.content .login-adbg{
+  width: 100%;
+  height: 500px;
+  background-image: url("http://ov1pmduk7.bkt.clouddn.com/banner_login.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+.content .login-adlink{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 400px;
+  height: 500px;
+}
+.content .login-wrap{
+  position: absolute;
+  top: 40px;
+  right: 60px;
+  width: 350px;
+  height: 428px;
+  background-color: rgba(255, 255, 255, .95)
+}
+.login-wrap .login-header{
+  width: 290px;
+  height: 60px;
+  margin: 0 auto;
+}
+.login-header ul{
+  margin-top: 15px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  font-size: 16px;
+  color: #97979B;
+  border-bottom: 1px solid #DCDCDF;
+}
+.login-header li{
+  float: left;
+  width: 145px;
+  cursor: pointer;
+}
+.login-header li.tabs-active{
+  color: #333333;
+  font-weight: bolder;
+}
+.login-header .hot-line{
+  position: relative;
+  left: 0px;
+  top: -2px;
+  width: 145px;
+  height: 2px;
+  background-color: #FF4401;
+  transition:all .3s;
+}
+.login-panel{
+  width: 290px;
+  margin: 0 auto;
+}
+.login-panel .tabs-panel{
+  float: left;
+  display: none;
+}
+.login-panel .tabs-panel-active{
+  display: block;
+}
+.footer{
+  width: 100%;
+  height: 100px;
+  padding-top: 40px;
+  text-align: center;
+  color: #666666;
+}
+.footer a{
+  padding: 0 5px;
+  color:#666666;
+}
+.footer a:hover {
+  color:#333333;
+  text-decoration: underline;
+}
+.footer a.active {
+  color: #666666;
+}
+.footer .copyright{
+  margin-top: 5px;
+  color: #666666;
+}
+
+.input-group {
+  display: flex;
+  width: 290px;
+  height: 38px;
+  background-color: #ffffff;
+  border: 1px solid #C3C3C7;
+  border-radius: 2px; 
+  margin-bottom: 10px; 
+}
+.input-group .input-group-img{
+  display: flex;
+  width: 38px;
+  height: 38px;
+  background-color: #D3D3D8;
+}
+.input-group .input-group-img img{
+  margin: 0 auto;
+}
+.input-group input{
+  position: relative;
+  flex: 1 1 auto;
+  width: 1%; /* 不设置宽度，调整input-group宽度会产生挤压 */
+  border: 0;
+  border-radius: 0 2px 2px 0; 
+  padding: 9px 12px;
+  font-size: 14px;
+  color: #333333;
+}
+.verification-input{
+  width: 190px;
+}
+input[type=text]:focus, input[type=tel]:focus, input[type=password]:focus{
+  border-color: #80bdff;
+  outline: 0;
+  box-shadow: 0 0 0 4px rgba(0,123,255,.25);
+}
+
+.geetest-input{
+  margin-bottom: 10px;
+}
+
+.login-other-info{
+  position: relative;
+  font-size: 12px;
+  color: #575656;
+}
+.login-other-info a{
+  position: absolute;
+  right: 0;
+  color: #575656;
+}
+.login-other-info a:hover{
+  color: #FF4401;
+  text-decoration: underline;
+}
+.checkbox-wrap{
+  cursor: pointer;
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none;
+}
+.checkbox-wrap span{
+  margin: 0 2px;
+}
+.login-bottom{
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  width: 100%;
+  height: 80px;
+  color: #97979D;
+  font-size: 12px;
+  background-color: rgba(240, 240, 240, .95);
+}
+.login-bottom p{
+  margin: 15px 0 8px 0;
+}
+.login-bottom .other-ways{
+  position: relative;
+  width: 290px;
+  margin: 0 auto;
+}
+.login-bottom .auth-link{
+  margin-right: 8px;
+}
+.login-bottom .registe-link{
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  color: #FF4401;
+}
+.login-bottom a.registe-link:hover{
+  text-decoration: underline;
+}
+.verification-wrap{
+  position: relative;
+}
+.btn{
+  color: #ffffff;
+  background-color: #FF4401;
+  border-radius: 3px;
+  outline:none;
+  border: 0;
+}
+.btn-login{
+  margin-top: 10px;
+  width: 100%;
+  height: 42px;
+  font-size: 18px;
+  font-weight: bolder;
+}
+.btn-registe{
+  margin-left: 80px; 
+  width: 350px;
+  height: 42px;
+  font-size: 18px;
+  font-weight: bolder;
+}
+.login-wrap .btn-verification{
+  position: absolute;
+  top: 0px;
+  right: 0px;;
+  width: 90px;
+  height: 38px;
+  font-size: 14px;
+}
+.login-wrap .tips-danger{
+  width: 290px;
+  height: 22px;
+  line-height: 22px;
+  border: 1px solid #E7AF6F;
+  background-color: #F7E6DF;
+  color: #67686C;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+.tips-danger img{
+  margin-left: 8px;
+  margin-right: 4px;
+  vertical-align: middle;
+}
+
+.toggle-wrap{
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+.toggle-wrap .scan-tips{
+  position: relative;
+  top: 0px;
+  right: 52px;
+}
+.btn-toggle{
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 52px;
+  height: 52px;
+  cursor: pointer;
+  background-image: url(../images/half_qrcode.svg);
+  background-repeat: no-repeat;
+  background-position: right top;
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none;
+}
+
+.scan-login{
+  display: none;
+}
+
+.scan-login .scan-title{
+  margin: 25px 0 0 30px;
+  font-size: 16px;
+  font-weight: bolder;
+}
+
+.scan-login img{
+  display: block;
+  margin: 0 auto;
+}
+
+.scan-login .img-qrcode{
+  margin-top: 55px;
+  margin-bottom: 25px;
+}
+
+.scan-login .link-wrap {
+  position: absolute;
+  right: 30px;
+  bottom: 25px;
+  font-size: 12px;
+}
+
+.scan-login .link-wrap a {
+  margin-right: 10px;
+  color: #6C6C6C;
+  cursor: pointer;
+}
+
+.scan-login .link-wrap a:hover {
+  color: #FF4401;
+  text-decoration: underline;
+}
+
+.registe-wrap{
+  width: 100%;
+  height: 650px;
+  border: 1px solid #EBEBEB;
+}
+.registe-form{
+  width: 700px;
+}
+.registe-banner{
+  width: 500px;
+  height: 650px;
+  background-image: url(../images/banner_registe.png);
+  background-repeat: no-repeat;
+}
+.registe-title{
+  margin: 40px 0 40px 40px;
+  font-size: 16px;
+  font-weight: bolder;
+}
+
+.reg-item {
+  width: 455px;
+  margin: 0 auto;
+  margin-bottom: 15px;
+}
+.reg-item .item-title{
+  margin-right: 15px;
+  height: 28px;
+  line-height: 28px;
+  font-size: 14px;
+  color: #555555;
+}
+.reg-item .item-title span{
+  color: #CC0000;
+}
+.reg-item .item-input input{
+  padding: 0px 10px;
+  margin-bottom: 5px;
+  width: 330px;
+  height: 28px;
+  border: 1px solid #C3C3C7;
+  border-radius: 2px;
+}
+.reg-item .item-input p{
+  color: #999999;
+  font-size: 12px;
+}
+.reg-item .reg-geetest{
+  margin-left: 84px;
+}
+.reg-item input.verification-input{
+  width: 210px;
+}
+.reg-item .btn-verification{
+  vertical-align: top;
+  margin-left: 5px;
+  width: 110px;
+  height: 30px;
+  font-size: 12px;
+  color: #626266;
+  border: 1px solid #C3C3C7;
+  border-radius: 2px;
+  background: -webkit-linear-gradient(#FFFFFF, #E6E6EA); /* Safari 5.1 - 6.0 */
+  background: -o-linear-gradient(#FFFFFF, #E6E6EA); /* Opera 11.1 - 12.0 */
+  background: -moz-linear-gradient(#FFFFFF, #E6E6EA); /* Firefox 3.6 - 15 */
+  background: linear-gradient(#FFFFFF, #E6E6EA); /* 标准的语法 */
+}
+.reg-item .checkbox-wrap{
+  margin-left: 82px;
+  color: #595959;
+  font-size: 12px;
+  cursor: default;
+}
+.reg-item .checkbox-wrap input{
+  cursor: pointer;
+}
+.reg-item .checkbox-wrap a{
+  color: #10409F;
+}
+.reg-item .checkbox-wrap a:hover{
+  color: #10409F;
+  text-decoration: underline;
+}
+.registe-wrap .login-link{
+  width: 407px;
+  margin: 0 auto;
+  color: #595959;
+  font-size: 12px;
+  text-align: right;
+}
+.registe-wrap .login-link a{
+  color: #FF4401;
+}
